@@ -5,6 +5,7 @@ from django.utils import timezone
 from blog.models import Post
 from blog.forms import CommentForm
 
+
 # module-level logger variable
 logger = logging.getLogger(__name__)
 
