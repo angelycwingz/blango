@@ -41,6 +41,15 @@ class Dev(Configuration):
     # Add custom blango User model
     AUTH_USER_MODEL =  "blango_auth.User"
 
+    # Console email backend
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+    # Registration activation days
+    ACCOUNT_ACTIVATION_DAYS = 7
+
+    # To close user account registration
+    #REGISTRATION_OPEN = False
+
     # Application definition
 
     INSTALLED_APPS = [
