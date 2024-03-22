@@ -78,6 +78,7 @@ class Dev(Configuration):
         'blango_auth',
         'blog',
         'debug_toolbar',
+        'rest_framework',
     ]
 
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
