@@ -79,6 +79,7 @@ class Dev(Configuration):
         'blog',
         'debug_toolbar',
         'rest_framework',
+        'rest_framework.authtoken',
     ]
 
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -211,6 +212,15 @@ class Dev(Configuration):
         "handlers": ["console"],
         "level": "DEBUG",
     },
+    }
+
+    # DRF settings
+    REST_FRAMEWORK = {
+        "DEFAULT_AUTHENTICATION_CLASSES":[
+            "rest_framework.authentication.BasicAuthentication",
+            "rest_framework.authentication.SessionAuthentication",
+            "rest_framework.authentication.TokenAuthentication",
+        ]
     }
 
     INTERNAL_IPS=["192.168.10.226"]
