@@ -80,6 +80,7 @@ class Dev(Configuration):
         'debug_toolbar',
         'rest_framework',
         'rest_framework.authtoken',
+        'drf_yasg'
     ]
 
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -224,6 +225,14 @@ class Dev(Configuration):
         "DEFAULT_PERMISSION_CLASSES": [
           "rest_framework.permissions.IsAuthenticatedOrReadOnly"
         ]
+    }
+
+    # Swagger UI settings
+    SWAGGER_SETTINGS = {
+        "SECURITY_DEFINITIONS": {
+            "Token": {"type": "apiKey", "name": "Authorization", "in": "header"},
+            "Basic": {"type": "basic"},
+        }
     }
 
     INTERNAL_IPS=["192.168.10.226"]
